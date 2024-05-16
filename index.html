@@ -9,7 +9,7 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website complete</title>
+        <title>Animesh Dutt Mishra</title>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -201,14 +201,16 @@
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
-
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Post" class="contact__button button">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="b075f81c-7151-4f3d-9219-dd72e94fa51e">
+                        <input type="text" name="name" required placeholder="Name" class="contact__input">
+                        <input type="email" name="email" required placeholder="Email" class="contact__input">
+                        <textarea name="message" required cols="30" rows="10" placeholder="Message" class="contact__input"></textarea>
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <button type="submit" class="contact__button button">Submit Form</button>
                     </form>
+                    <div id="message" style="display: none;"></div>
                 </div>
             </section>
         </main>
@@ -222,7 +224,7 @@
                 <a href="https://twitter.com/admishra0504" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
             <p class="footer__copy">All rigths reserved</p>
-        </footer>
+        </footer>   
 
 
         <!--===== SCROLL REVEAL =====-->
